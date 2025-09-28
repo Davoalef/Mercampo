@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tienda Online de mercados campesinos">
+
+    <!-- ========== Page Title ========== -->
+    <title>Mercampo: Mercados Campesinos</title>
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/flaticon-set.css" rel="stylesheet">
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-datepicker3.css" rel="stylesheet">
+    <link href="assets/css/validnavs.css" rel="stylesheet">
+    <link href="assets/css/helper.css" rel="stylesheet">
+    <link href="assets/css/unit-test.css" rel="stylesheet">
+    <link href="assets/css/shop.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <!-- ========== End Stylesheet ========== -->
+
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="radio-btn-light">
+        <div class="radio-inner-light"></div>
+    </div>
+
+    <!-- Start Preloader 
+    ============================================= -->
+    <div id="preloader">
+        <div id="restan-preloader" class="restan-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- Header 
+    ============================================= -->
+    <header>
+        <!-- Start Navigation -->
+        <nav class="navbar mobile-sidenav navbar-box navbar-default validnavs navbar-sticky">
+
+            <!-- Start Top Search -->
+            <div class="top-search">
+                <div class="container-xl">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top Search -->
+
+
+            <div class="container nav-box d-flex justify-content-between align-items-center">
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo.png" class="logo" alt="Logo">
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+
+                    <img src="assets/img/logo.png" alt="Logo">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-times"></i>
+                    </button>
+
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <!-- Inicio -->
+                        <li><a href="index.html" class="active">Inicio</a></li>
+
+                        <!-- Nosotros -->
+                        <li><a href="about-us.html" class="active">Nosotros</a></li>
+
+                        <!-- Alimentos -->
+                        <li><a href="products.html">Productos</a></li>
+
+                        <!-- Adicionales -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adicionales</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="dato.html">Eventos</a></li>
+                                <li><a href="recetas.html">Historia</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+
+                <div class="attr-right">
+                    <!-- Start Atribute Navigation -->
+                    <div class="attr-nav attr-box">
+                        <ul>
+                            <li>
+                                <a href="cart.html">
+                                    <i class="far fa-shopping-cart"></i>
+                                    <!-- contador dinámico -->
+                                    <span class="badge" id="cart-count">0</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="register.html">
+                                    <i class="far fa-user"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Atribute Navigation -->
+                </div>
+
+            </div>
+            <!-- Overlay screen for menu -->
+            <div class="overlay-screen"></div>
+            <!-- End Overlay screen for menu -->
+
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area bg-cover text-center text-light" style="background-image: url(assets/img/shape/11.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <h1>Sobre Nosotros</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li>Nosotros</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+<!-- Start Food Menu ============================================= -->
+<div class="food-menu-area inc-isotop default-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="site-heading text-center">
+                    <h4 class="sub-title">Menu</h4>
+                    <h2 class="title">Descrubre todos nuestros Productos</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="food-menu-area">
+            <div class="row">
+                <div class="col-md-12 food-menu-content text-center">
+                    <div class="mix-item-menu text-center"> <button class="active" data-filter="*">Todo</button> <button
+                            data-filter=".alimentos">Alimentos</button> <button
+                            data-filter=".artesanias">Artesanías</button> <button data-filter=".medicinales">Productos
+                            Medicinales</button> </div> <!-- End Mixitup Nav-->
+                    <div class="col-lg-12">
+                        <ul class="vt-products columns-4">
+                            <!-- Producto 1 -->
+                            <li class="product alimentos wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="#"> <img src="img/antipasto.jpg"
+                                                alt="Antipasto"> </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Antipasto', 3000, 'alimentos')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Antipasto</h4>
+                                        <p>500 g</p>
+                                        <div class="price"><span>$3.000</span></div>
+                                        <p class="unit-price">Gramo a $6</p>
+                                    </div>
+                                </div>
+                            </li> <!-- Producto 2 -->
+                            <li class="product alimentos wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="#"> <img src="img/antipasto2.jpg"
+                                                alt="Anti-pasto"> </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Anti-pasto', 2500, 'alimentos')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Antipasto</h4>
+                                        <p>600 g</p>
+                                        <div class="price"><span>$2.500</span></div>
+                                        <p class="unit-price">Gramo a $4,17</p>
+                                    </div>
+                                </div>
+                            </li> <!-- Producto 3 -->
+                            <li class="product alimentos wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="#"> <img src="img/cacao.jpg" alt="Cacao"> </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Cacao', 5200, 'alimentos')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Cacao puro</h4>
+                                        <p>700 g</p>
+                                        <div class="price"><span>$5.200</span></div>
+                                        <p class="unit-price">Gramo a $7,43</p>
+                                    </div>
+                                </div>
+                            </li> <!-- Producto 4 -->
+                            <li class="product alimentos wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="campo.html#yiyi"> <img src="img/granola.jpg"
+                                                alt="Granola"> </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Granola', 4800, 'alimentos')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Granola Artesanal</h4>
+                                        <p>1 unidad</p>
+                                        <div class="price"><span>$4.800</span></div>
+                                        <p class="unit-price">Unidad</p>
+                                    </div>
+                                </div>
+                            </li> <!-- Producto 5 -->
+                            <li class="product alimentos wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="#"> <img src="img/cafe.jpg" alt="Cafe"> </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Cafe', 5200, 'alimentos')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Café</h4>
+                                        <p>1 unidad</p>
+                                        <div class="price"><span>$5.200</span></div>
+                                        <p class="unit-price">Unidad</p>
+                                    </div>
+                                </div>
+                            </li> <!-- Producto 6 -->
+                            <li class="product alimentos wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="campo.html#orellanas"> <img src="img/zetas.jpg"
+                                                alt="Orellanas"> </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Orellanas', 30000, 'alimentos')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Setas del meta</h4>
+                                        <p>1 unidad</p>
+                                        <div class="price"><span>$30.000</span></div>
+                                        <p class="unit-price">Unidad</p>
+                                    </div>
+                                </div>
+                            </li> <!-- Artesanías -->
+                            <li class="product artesanias wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="campo.html#escumarranitos"> <img
+                                                src="img/alcancia.jpg" alt="Alcancia"> </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Alcancia', 2000, 'artesanias')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Alcancia</h4>
+                                        <p>1 unidad</p>
+                                        <div class="price"><span>$2.000</span></div>
+                                        <p class="unit-price">Unidad</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product artesanias wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="campo.html#materas"> <img src="img/matera.jpg"
+                                                alt="Matera"> </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Matera', 2500, 'artesanias')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Materas</h4>
+                                        <p>500 g</p>
+                                        <div class="price"><span>$2.500</span></div>
+                                        <p class="unit-price">500 g</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product artesanias wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="#"> <img src="img/bolsos.jpg" alt="Bolsos">
+                                        </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Bolsos', 1800, 'artesanias')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Bolsos Artesanales</h4>
+                                        <p>1 unidad</p>
+                                        <div class="price"><span>$1.800</span></div>
+                                        <p class="unit-price">Unidad</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product artesanias wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="campo.html#escumarranitos"> <img
+                                                src="img/llaveros.jpg" alt="Llaveros"> </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Llaveros', 3000, 'artesanias')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Pines Representativos</h4>
+                                        <p>1 unidad</p>
+                                        <div class="price"><span>$3.000</span></div>
+                                        <p class="unit-price">Unidad</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product artesanias wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="#"> <img src="img/plantas.jpg" alt="Plantas">
+                                        </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Plantas', 1700, 'artesanias')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Plantas Para el hogar</h4>
+                                        <p>500 g</p>
+                                        <div class="price"><span>$1.700</span></div>
+                                        <p class="unit-price">500 g</p>
+                                    </div>
+                                </div>
+                            </li> <!-- Medicinales -->
+                            <li class="product medicinales wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="campo.html#Nabiotec"> <img
+                                                src="img/antibiopar.jpg" alt="Antibiopar"> </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Antibiopar', 3000, 'medicinales')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Antibiopar</h4>
+                                        <p>500 g</p>
+                                        <div class="price"><span>$3.000</span></div>
+                                        <p class="unit-price">Gramo a $6</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product medicinales wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="campo.html#melipocumare"> <img
+                                                src="img/gotas.jpg" alt="Gotas"> </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Gotas', 2500, 'medicinales')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Miel de abeja de gotas</h4>
+                                        <p>600 g</p>
+                                        <div class="price"><span>$2.500</span></div>
+                                        <p class="unit-price">Gramo a $4,17</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product medicinales wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="campo.html#melipocumare"> <img
+                                                src="img/miel.jpg" alt="Miel"> </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Miel', 5200, 'medicinales')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Miel</h4>
+                                        <p>700 g</p>
+                                        <div class="price"><span>$5.200</span></div>
+                                        <p class="unit-price">Gramo a $7,43</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product medicinales wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="campo.html#melipocumare"> <img
+                                                src="img/polen.jpg" alt="Polen"> </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Polen', 4800, 'medicinales')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Polen</h4>
+                                        <p>1 unidad</p>
+                                        <div class="price"><span>$4.800</span></div>
+                                        <p class="unit-price">Unidad</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product medicinales wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="campo.html#melipocumare"> <img
+                                                src="img/vino.jpg" alt="Vino"> </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Vino de Cacao', 5200, 'medicinales')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Vino de Cacao</h4>
+                                        <p>1 unidad</p>
+                                        <div class="price"><span>$5.200</span></div>
+                                        <p class="unit-price">Unidad</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product medicinales wow fadeInUp">
+                                <div class="product-contents">
+                                    <div class="product-image"> <a href="campo.html#melipocumare"> <img
+                                                src="img/villavino.jpg" alt="Villavino"> </a>
+                                        <div class="shop-action">
+                                            <ul>
+                                                <li class="cart"> <a href="#"
+                                                        onclick="addToCart('Villavino', 3800, 'medicinales')">
+                                                        <span>Agregar</span> </a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4 class="product-title">Villavino</h4>
+                                        <p>1 unidad</p>
+                                        <div class="price"><span>$3.800</span></div>
+                                        <p class="unit-price">Unidad</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- End Food Menu -->
+
+    <!-- Start Footer 
+    ============================================= -->
+    <footer class="bg-dark footer-style-one text-light">
+        <div class="container">
+            <div class="row">
+                <!-- Singel Item -->
+                <div class="col-lg-3 col-md-6 footer-item mt-50">
+                    <div class="f-item about">
+                        <img src="assets/img/logo-3.png" alt="Image Not Found">
+                        <p>
+                            Autenticidad: productos frescos, naturales y hechos con amor.
+                        </p>
+                        <ul class="opening-list">
+                            <li>
+                                Lun - Vie <span class="text-end">8:00 AM - 6:00 PM</span>
+                            </li>
+                            <li>
+                                Sábado <span class="text-end">9:00 AM - 5:00 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End Singel Item -->
+
+                <!-- Singel Item -->
+                <div class="col-lg-2 col-md-6 mt-50 footer-item pl-50 pl-md-15 pl-xs-15">
+                    <div class="f-item link">
+                        <h4 class="widget-title">Explore</h4>
+                        <ul>
+                            <li>
+                                <a href="about-us.html">Compnay Profile</a>
+                            </li>
+                            <li>
+                                <a href="about-us.html">About</a>
+                            </li>
+                            <li>
+                                <a href="contact-us.html">Help Center</a>
+                            </li>
+                            <li>
+                                <a href="contact-us.html">Career</a>
+                            </li>
+                            <li>
+                                <a href="about-us.html">Features</a>
+                            </li>
+                            <li>
+                                <a href="contact-us.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End Singel Item -->
+
+                <!-- Singel Item -->
+                <div class="col-lg-3 col-md-6 footer-item  mt-50">
+                    <div class="f-item contact">
+                        <h4 class="widget-title">Contact Info</h4>
+                        <ul class="contact-widget">
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="content">
+                                    Cl.12 # 18-57, Cumaral, Meta
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="content">
+                                    <a href="tel:3157755185">+315 7755185</a> <br> <a href="tel:3152072625">+315
+                                        2072625</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="content">
+                                    <a href="mailto:support@mercampo.com">support@mercampo.com</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End Singel Item -->
+
+                <!-- Singel Item -->
+                <div class="col-lg-4 col-md-6 footer-item mt-50">
+                    <div class="f-item newsletter">
+                        <h4 class="widget-title">Newsletter</h4>
+                        <p>
+                            Descubre sabores auténticos, frescos y naturales,
+                            cultivados con dedicación por nuestros campesinos de Cumaral.
+                        </p>
+                        <div class="footer-socila-items mt-30">
+                            <h4>Redes Sociales: </h4>
+                            <ul class="footer-social">
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Singel Item -->
+
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="row align-center">
+                    <div class="col-lg-6">
+                        <p>
+                            © Copyright 2025 Mercampo. Derechos Reservados
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- End Footer Bottom -->
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/mixitup@3/dist/mixitup.min.js"></script>
+
+    <script>
+        var containerEl = document.querySelector('.vt-products');
+        var mixer = mixitup(containerEl, {
+            selectors: {
+                target: '.product'
+            },
+            animation: {
+                duration: 300
+            }
+        });
+    </script>
+    
+    <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/progress-bar.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/YTPlayer.min.js"></script>
+    <script src="assets/js/loopcounter.js"></script>
+    <script src="assets/js/validnavs.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+    <script src="assets/js/gsap.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/SplitText.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
