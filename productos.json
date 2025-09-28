@@ -1,0 +1,42 @@
+[
+  {
+    "nombre": "Antipasto",
+    "descripcion": "500 g",
+    "precio": 3000,
+    "unidad": "Gramo a $6",
+    "categoria": "alimentos",
+    "imagen": "img/antipasto.jpg"
+  },
+  {
+    "nombre": "Cacao puro",
+    "descripcion": "700 g",
+    "precio": 5200,
+    "unidad": "Gramo a $7,43",
+    "categoria": "alimentos",
+    "imagen": "img/cacao.jpg"
+  },
+  {
+    "nombre": "Setas del meta",
+    "descripcion": "1 unidad",
+    "precio": 30000,
+    "unidad": "Unidad",
+    "categoria": "alimentos",
+    "imagen": "img/zetas.jpg"
+  },
+  {
+    "nombre": "Alcancia",
+    "descripcion": "1 unidad",
+    "precio": 2000,
+    "unidad": "Unidad",
+    "categoria": "artesanias",
+    "imagen": "img/alcancia.jpg"
+  },
+  {
+    "nombre": "Antibiopar",
+    "descripcion": "500 g",
+    "precio": 3000,
+    "unidad": "Gramo a $6",
+    "categoria": "medicinales",
+    "imagen": "img/antibiopar.jpg"
+  }
+]
