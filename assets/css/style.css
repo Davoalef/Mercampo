@@ -828,7 +828,7 @@ p {
 	content: "";
 	height: 100%;
 	width: 100%;
-	background: url(../img/shape/17.png);
+	background: url(../img/shape/1.7.png);
 	background-repeat: no-repeat;
 	background-size: 100px;
 	background-position: right center;
@@ -836,7 +836,7 @@ p {
 }
 
 .color-style-two .sub-title::after {
-	background: url(../img/shape/17-2.png);
+	background: url(../img/shape/1.7.png);
 	background-repeat: no-repeat;
 	background-size: 100px;
 	background-position: right center;
@@ -849,7 +849,7 @@ p {
 	content: "";
 	height: 100%;
 	width: 100%;
-	background: url(../img/shape/18.png);
+	background: url(../img/shape/1.7.png);
 	background-repeat: no-repeat;
 	background-size: 100px;
 	background-position: left center;
@@ -857,7 +857,7 @@ p {
 }
 
 .color-style-two .sub-title::before {
-	background: url(../img/shape/18-2.png);
+	background: url(../img/shape/1.7.png);
 	background-repeat: no-repeat;
 	background-size: 100px;
 	background-position: left center;
