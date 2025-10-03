@@ -216,44 +216,44 @@
                             <h5 class="sub-title">Contactanos</h5>
                             <h2 class="heading">Envianos un Mensaje</h2>
                         </div>
-                        <form id="contactForm" action="contact.php" method="POST" class="contact-form contact-form">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input class="form-control" id="email" name="email" placeholder="Email*" type="email" required>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group comments">
-                                        <textarea class="form-control" id="comments" name="comments" placeholder="Your Message *" required></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <button type="submit" name="submit" id="submit">
-                                        <i class="fa fa-paper-plane"></i> Enviar
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 alert-notification">
-                                <div id="message" class="alert-msg"></div>
-                            </div>
-                        </form>
+                        <form id="contactForm">
+                    <div class="row">
+                        <div class="col-lg-12">
+                        <div class="form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                        <div class="form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email*" type="email" required>
+                        </div>
+                        </div>
+                        <div class="col-lg-6">
+                        <div class="form-group">
+                            <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text">
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                        <div class="form-group comments">
+                            <textarea class="form-control" id="comments" name="comments" placeholder="Your Message *" required></textarea>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                        <button type="submit" id="submit">
+                            <i class="fa fa-paper-plane"></i> Enviar
+                        </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 alert-notification">
+                        <div id="message" class="alert-msg"></div>
+                    </div>
+                    </form>
                     </div>
                 </div>
 
@@ -422,6 +422,28 @@
 
             alert(`Agregaste "${name}" al carrito`);
         }
+    </script>
+
+    <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value; // correo del usuario
+    const phone = document.getElementById("phone").value;
+    const comments = document.getElementById("comments").value;
+
+    const destinatario = "mariangelobandovargas@gmail.com"; // tu correo
+    const subject = encodeURIComponent("Nuevo mensaje de " + name);
+    const body = encodeURIComponent(
+        `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${phone}\n\nMensaje:\n${comments}`
+    );
+
+    // 👉 Mandar a tu correo y al del usuario (en CC)
+    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${destinatario}&cc=${email}&su=${subject}&body=${body}`;
+
+    window.open(url, "_blank");
+    });
     </script>
     
     <!-- jQuery Frameworks
