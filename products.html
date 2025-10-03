@@ -97,7 +97,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo.png" class="logo" alt="Logo">
+                        <img src="assets/img/logom.png" class="logo" alt="Logo">
                     </a>
                 </div>
                 <!-- End Header Navigation -->
@@ -105,7 +105,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
 
-                    <img src="assets/img/logo.png" alt="Logo">
+                    <img src="assets/img/logom.png" alt="Logo">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-times"></i>
                     </button>
@@ -121,13 +121,7 @@
                         <li><a href="products.html">Productos</a></li>
 
                         <!-- Adicionales -->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adicionales</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="dato.html">Eventos</a></li>
-                                <li><a href="recetas.html">Historia</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="contact.html">Contactos</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
 
@@ -161,7 +155,7 @@
         </nav>
         <!-- End Navigation -->
     </header>
-    <!-- End Header -->
+    <!-- End Header -->s
 
     <!-- Start Breadcrumb 
     ============================================= -->
@@ -556,7 +550,7 @@
                 <!-- Singel Item -->
                 <div class="col-lg-3 col-md-6 footer-item mt-50">
                     <div class="f-item about">
-                        <img src="assets/img/logo-3.png" alt="Image Not Found">
+                        <img src="assets/img/logoñ.png" alt="Image Not Found">
                         <p>
                             Autenticidad: productos frescos, naturales y hechos con amor.
                         </p>
@@ -696,6 +690,45 @@
             animation: {
                 duration: 300
             }
+        });
+    </script>
+
+        <script>
+        // Cargar carrito desde localStorage o inicializar
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Mostrar cantidad actual de productos en el carrito
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("cart-count").innerText = cart.length;
+        });
+
+        // Agregar un producto al carrito, incluyendo su cantidad
+        function addToCart(name, price, category) {
+            const found = cart.find(item => item.name === name && item.category === category);
+            if (found) {
+                found.qty += 1; // si ya existe, aumentamos cantidad
+            } else {
+                cart.push({ name, price, category, qty: 1 }); // si no existe, empieza con qty = 1
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCartCount();
+
+            alert(`Agregaste "${name}" al carrito`);
+        }
+    </script>
+
+    <script>
+        // 🔒 Verificador de sesión
+        auth.onAuthStateChanged((user) => {
+        if (!user) {
+            // Si no hay usuario autenticado, redirigir a registro/login
+            alert("⚠️ Debes registrarte o iniciar sesión para comprar.");
+            window.location.href = "cliente.html";
+        } else {
+            console.log("Usuario autenticado:", user.email);
+            // Aquí podrías cargar el carrito específico de este usuario si lo guardas en Firestore
+        }
         });
     </script>
     

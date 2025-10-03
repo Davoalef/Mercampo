@@ -43,9 +43,6 @@
         <div class="radio-inner-light"></div>
     </div>
 
-
-    <!-- Header 
-    ============================================= -->
     <!-- Header 
     ============================================= -->
     <header>
@@ -73,7 +70,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo.png" class="logo" alt="Logo">
+                        <img src="assets/img/logom.png" class="logo" alt="Logo">
                     </a>
                 </div>
                 <!-- End Header Navigation -->
@@ -81,7 +78,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
 
-                    <img src="assets/img/logo.png" alt="Logo">
+                    <img src="assets/img/logom.png" alt="Logo">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-times"></i>
                     </button>
@@ -219,33 +216,30 @@
                             <h5 class="sub-title">Contactanos</h5>
                             <h2 class="heading">Envianos un Mensaje</h2>
                         </div>
-                        <form action="assets/mail/contact.php" method="POST" class="contact-form contact-form">
+                        <form id="contactForm" action="assets/mail/contact.php" method="POST" class="contact-form contact-form">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control" id="name" name="name" placeholder="Name" type="text">
-                                        <span class="alert-error"></span>
+                                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input class="form-control" id="email" name="email" placeholder="Email*" type="email">
-                                        <span class="alert-error"></span>
+                                        <input class="form-control" id="email" name="email" placeholder="Email*" type="email" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text">
-                                        <span class="alert-error"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group comments">
-                                        <textarea class="form-control" id="comments" name="comments" placeholder="Your Message *"></textarea>
+                                        <textarea class="form-control" id="comments" name="comments" placeholder="Your Message *" required></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -256,7 +250,6 @@
                                     </button>
                                 </div>
                             </div>
-                            <!-- Alert Message -->
                             <div class="col-lg-12 alert-notification">
                                 <div id="message" class="alert-msg"></div>
                             </div>
@@ -277,7 +270,7 @@
                 <!-- Singel Item -->
                 <div class="col-lg-3 col-md-6 footer-item mt-50">
                     <div class="f-item about">
-                        <img src="assets/img/logo-3.png" alt="Image Not Found">
+                        <img src="assets/img/logoñ.png" alt="Image Not Found">
                         <p>
                             Autenticidad: productos frescos, naturales y hechos con amor.
                         </p>
@@ -405,6 +398,45 @@
         </div>
     </footer>
     <!-- End Footer -->
+
+        <script>
+        // Cargar carrito desde localStorage o inicializar
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Mostrar cantidad actual de productos en el carrito
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("cart-count").innerText = cart.length;
+        });
+
+        // Agregar un producto al carrito, incluyendo su cantidad
+        function addToCart(name, price, category) {
+            const found = cart.find(item => item.name === name && item.category === category);
+            if (found) {
+                found.qty += 1; // si ya existe, aumentamos cantidad
+            } else {
+                cart.push({ name, price, category, qty: 1 }); // si no existe, empieza con qty = 1
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCartCount();
+
+            alert(`Agregaste "${name}" al carrito`);
+        }
+    </script>
+
+    <script>
+        // 🔒 Verificador de sesión
+        auth.onAuthStateChanged((user) => {
+        if (!user) {
+            // Si no hay usuario autenticado, redirigir a registro/login
+            alert("⚠️ Debes registrarte o iniciar sesión para comprar.");
+            window.location.href = "cliente.html";
+        } else {
+            console.log("Usuario autenticado:", user.email);
+            // Aquí podrías cargar el carrito específico de este usuario si lo guardas en Firestore
+        }
+        });
+    </script>
     
     <!-- jQuery Frameworks
     ============================================= -->

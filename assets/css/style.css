@@ -6543,6 +6543,9 @@ ul.meal-items.style-two li {
 
 .chef-style-one-item .thumb img {
     border-radius: 10px;
+	width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
 
 .chef-one-social {
@@ -6779,6 +6782,9 @@ ul.meal-items.style-two li {
 
 .chef-single-area .chef-content-top img {
 	border-radius: 30px;
+	height: 585px;
+    width: 100%;
+	object-fit: cover;
 }
 
 .skill-items .progress-box:last-child {
