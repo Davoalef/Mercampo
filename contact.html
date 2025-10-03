@@ -423,20 +423,6 @@
             alert(`Agregaste "${name}" al carrito`);
         }
     </script>
-
-    <script>
-        // 🔒 Verificador de sesión
-        auth.onAuthStateChanged((user) => {
-        if (!user) {
-            // Si no hay usuario autenticado, redirigir a registro/login
-            alert("⚠️ Debes registrarte o iniciar sesión para comprar.");
-            window.location.href = "cliente.html";
-        } else {
-            console.log("Usuario autenticado:", user.email);
-            // Aquí podrías cargar el carrito específico de este usuario si lo guardas en Firestore
-        }
-        });
-    </script>
     
     <!-- jQuery Frameworks
     ============================================= -->
